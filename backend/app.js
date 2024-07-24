@@ -8,11 +8,13 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const authRoutes= require('./routes/auth');
 
+const itemsRoute = require('./routes/items');
+const sitesRoute = require('./routes/sites');
+
 const db = require('./db');
 const cors = require('cors');
 // const bcrypt = require('bcrypt');
 // const jwt = require('jsonwebtoken');
-
 // const SECRET_KEY = 'smartGiant'; // Replace with your own secret key
 
 var app = express();
@@ -46,6 +48,8 @@ db.connect(err => {
 app.use('/', indexRouter); //index routes
 app.use('/login',authRoutes); // Use auth routes
 app.use('/users', usersRouter); //users routes 
+app.use('/mongo/items', itemsRoute);///mongoosh
+app.use('/mongo/site', sitesRoute);//mongoDB //verified
 
 
 // catch 404 and forward to error handler
