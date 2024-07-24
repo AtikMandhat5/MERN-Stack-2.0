@@ -1,0 +1,9 @@
+#install librray
+
+npm install primereact primeicons primeflex
+
+// src/index.js or src/App.js
+import 'primereact/resources/themes/saga-blue/theme.css';  // or any other theme
+import 'primereact/resources/primereact.min.css';
+import 'primeicons/primeicons.css';
+import 'primeflex/primeflex.css';
